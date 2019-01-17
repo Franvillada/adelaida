@@ -1,0 +1,134 @@
+.banner-container{
+    background-image: url('../images/Background-Home@2x-80.jpg');
+    background-size: cover;
+}
+
+.logo{
+    width: 225px;
+    height: 225px;
+}
+
+.banner-container h3 a{
+    color: #F5F4EF;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    text-decoration: none;
+}
+
+.banner-texto h2{
+    margin-top: 100px;
+    color: #F5F4EF;
+    font-size: 30px;
+    font-family : 'Playfair Display',serif;
+    font-weight : bold;
+    margin-bottom: 300px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.info-marca{
+    padding-top: 100px;
+}
+.botones{
+    background-color: #D6C8A8;
+    margin-right: 5px;
+}
+
+.botones:hover{
+    background-color: #BEA877;
+}
+
+.botones h3 a{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight : bold;
+    font-size : 30px;
+    color : white;
+    text-decoration: none;
+}
+
+.info-marca p{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight : lighter;
+    font-size : 40px;
+    color : black;
+}
+
+.boton{
+    background-color: #BEA877;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
+.boton a{
+    text-decoration: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight : bold;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+.contenedor-noticias{
+    background-color: #D6C8A8;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.contenedor-noticias h3{
+    font-family : 'Open Sans Condensed';
+    font-weight : bold;
+    font-size : 35px;
+    color : #000;
+    letter-spacing: 1px;
+}
+
+.img-noticia{
+    width: 100%;
+    border: 1px solid #BEA877;
+    opacity: 0.75;
+}
+
+.img-noticia:hover{
+    opacity: 1;
+}
+
+.contenedor-noticias a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.icon{
+    width: 25px;    
+}
+
+.contenedor-contacto{
+    padding-top: 125px;
+    padding-bottom: 125px;
+}
+
+.contenedor-contacto .row{
+    margin: 15px auto;
+}
+
+#map{
+    border: 1px solid #BEA877;
+}
+
+.pie-pagina{
+    border-top: 1px solid #BEA877;
+}
+
+.pie-pagina img{
+    width: 75%;
+}
+
+.pie-pagina a{
+    color: #000;
+    font-weight: bold;
+}
+
+.pie-pagina a:hover{
+    text-decoration: none;
+}
