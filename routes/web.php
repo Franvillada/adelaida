@@ -12,4 +12,10 @@
 */
 
 Route::get('/',  'HomeController@index');
-Route::get('/home',  'HomeController@index');
+Route::get('/home',  'HomeController@index')->name('home');
+
+Route::get('/admcontenidos', 'BackofficeController@index');
+Route::get('/admcontenidos/imagen-principal','ImageController@index')->name('imagen-principal');
+Route::post('/admcontenidos/imagen-principal','ImageController@store');
+Route::get('/admcontenidos/phrases','PhraseController@index');
+Route::get('/admcontenidos/news','NewsController@index');

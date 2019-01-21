@@ -13,7 +13,7 @@
 <body>
     <div id="home" class="row banner-container">
         <div class="col-lg-12">
-            <div class="row header">
+            <div class="row">
                 <div class="col-lg-2 mt-4 text-right">
                     <h3><a href="#home">Home</a></h3>
                 </div>
