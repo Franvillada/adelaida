@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\News;
+use App\Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection as Collection;
 
 class HomeController extends Controller
 {
@@ -13,7 +16,25 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $arr = [];
+        $i = 0;
+        $news = News::all()->reverse();
+        foreach ($news as $value) {
+            if($arr == null){
+                $arr[0] = $value;
+            }elseif($value->category != $arr[0]->category){
+                if(isset($arr[1])){
+                    $arr[2] = $value;
+                }else {
+                    $arr[1] = $value;
+                }
+            }
+            if(isset($arr[0]) && isset($arr[1]) && isset($arr[2])){
+                break;
+            }
+        }
+        $image = Image::all()->last();
+        return view('home')->with('arr',$arr)->with('image',$image);
     }
 
     /**

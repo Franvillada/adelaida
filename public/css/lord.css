@@ -1,37 +1,43 @@
 .banner-container{
-    background-image: url('../storage/background-images/1.jpeg');
     background-size: cover;
 }
 
 .logo{
-    width: 225px;
-    height: 225px;
+    width: 14.0625rem;
+    height: 14.0625rem;
 }
 
-.banner-container h3 a{
-    color: #F5F4EF;
-    font-size: 20px;
-    font-family: 'Playfair Display', serif;
+.cart-icon{
+    width: 1.4em;
+    padding-top: 0.3rem;
+    margin-right: 0.7rem;
+}
+
+.banner-container a, .banner-container a h3{
+    color: white;
+    font-size: 1.25rem !important;
+    font-family: 'Playfair Display' ,serif;
     text-decoration: none;
 }
 
 .banner-texto h2{
     margin-top: 100px;
+    margin-bottom: 300px;
     color: #F5F4EF;
-    font-size: 30px;
+    font-size: 1.875rem;
     font-family : 'Playfair Display',serif;
     font-weight : bold;
-    margin-bottom: 300px;
-    letter-spacing: 1px;
-    word-spacing: 2px;
+    letter-spacing: 0.0625rem;
+    word-spacing: 0.125rem;
 }
 
-.info-marca{
+.contenedor-info-marca{
     padding-top: 100px;
+    min-height: 800px;
 }
 .botones{
     background-color: #D6C8A8;
-    margin-right: 5px;
+    margin-right: 0.833rem;
 }
 
 .botones:hover{
@@ -41,16 +47,20 @@
 .botones h3 a{
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight : bold;
-    font-size : 30px;
+    font-size : 1.875rem;
     color : white;
     text-decoration: none;
 }
 
-.info-marca p{
+.contenedor-info-marca p{
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight : lighter;
-    font-size : 40px;
+    font-size : 2em;
     color : black;
+}
+
+.contenedor-texto-info-marca{
+    min-height: 500px;
 }
 
 .boton{
@@ -59,38 +69,55 @@
     margin-bottom: 100px;
 }
 
-.boton a{
-    text-decoration: none;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight : bold;
-    color: white;
-    font-size: 30px;
-    letter-spacing: 1px;
-    word-spacing: 4px;
-}
-
 .contenedor-noticias{
-    background-color: #D6C8A8;
+    background-color: #fff;
     padding-top: 100px;
     padding-bottom: 100px;
 }
 
 .contenedor-noticias h3{
-    font-family : 'Open Sans Condensed';
-    font-weight : bold;
-    font-size : 35px;
-    color : #000;
-    letter-spacing: 1px;
+    color: #000;
+    font-size: 2.2em;
+    font-family : 'Playfair Display',serif;
+    font-weight : lighter;
+    letter-spacing: 0.0625rem;
+    word-spacing: 0.125rem;
 }
 
-.img-noticia{
-    width: 100%;
-    border: 1px solid #BEA877;
-    opacity: 0.75;
+.contenedor-noticia1{
+    min-height: 400px;
+    background: url('../images/moda.jpg') center / cover;
 }
 
-.img-noticia:hover{
-    opacity: 1;
+.contenedor-noticia1:hover{  
+    background: url('../images/moda.jpg') center / cover, #D6C8A8;
+    background-blend-mode: screen;
+}
+
+.contenedor-noticia2{
+    min-height: 400px;
+    background: url('../images/reciclaje.jpg') center / cover;
+}
+
+.contenedor-noticia2:hover{
+    min-height: 400px;
+    background: url('../images/reciclaje.jpg') center / cover, #D6C8A8;
+    background-blend-mode: screen;
+}
+
+.contenedor-noticia3{
+    min-height: 400px;
+    background: url('../images/lorem.jpg') center / cover;
+}
+
+.contenedor-noticia3:hover{
+    min-height: 400px;
+    background: url('../images/lorem.jpg') center / cover, #D6C8A8;
+    background-blend-mode: screen;
+}
+
+.info-noticia{
+    display: none;
 }
 
 .contenedor-noticias a{
@@ -100,7 +127,7 @@
 }
 
 .icon{
-    width: 25px;    
+    width: 1.5625rem; 
 }
 
 .contenedor-contacto{
@@ -108,8 +135,16 @@
     padding-bottom: 125px;
 }
 
-.contenedor-contacto .row{
-    margin: 15px auto;
+.contenedor-contacto p{
+    font-size: 1.2em;
+}
+
+.contenedor-contacto a{
+    color: #212529;
+}
+
+#direccion1:hover, #direccion2:hover{
+    text-decoration: underline;
 }
 
 #map{
@@ -133,13 +168,15 @@
     text-decoration: none;
 }
 
+/*Comienzan los estilos del backoffice*/
+
 .header{
-    height: 125px;
+    height: 100px;
 }
 
-.header img{
-    width: 125px;
-    height: 125px;
+.backoffice-logo{
+    width: 9rem;
+    height: 9rem;
 }
 
 .header h1{
@@ -168,13 +205,13 @@
 }
 
 .background-image-label {
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: bold;
     color: #fff;
     background-color: #BEA877;
     display: inline-block;
     transition: all .5s;
-    padding: 10px 25px !important;
+    padding: 0.625rem 1.5625rem !important;
     width: fit-content;
     text-align: center;
     }
@@ -184,5 +221,7 @@
 }
 
 .contenedor-imagen{
-    max-height: 400px;
+    min-height: 400px;
+    max-height: 500px;
 }
+

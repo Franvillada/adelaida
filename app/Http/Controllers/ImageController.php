@@ -26,7 +26,7 @@ class ImageController extends Controller
 
         $newImage->save();
 
-        return redirect()->route('home');
+        return redirect()->route('imagen-principal');
     }
 
 

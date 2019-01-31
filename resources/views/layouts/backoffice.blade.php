@@ -13,11 +13,9 @@
     <div class="row container-fluid p-0 m-0 backoffice-container">
     <div class="col-lg-12">
         <div class="row header" style="background-color: #D6C8A8;">
-        <div class="col-lg-3 text-center">
-            <img src="{{ asset('images/Logo.svg')}}" alt="Logo-Adelaida" class="logo">
-        </div>
-        <div class="col-lg-7 d-flex align-items-center justify-content-center">
-            <h1>Administrador de Contenidos</h1>
+        <div class="col-lg-8 offset-lg-2 d-flex justify-content-center align-items-center">
+            <img src="{{ asset('images/Logo.svg')}}" alt="Logo-Adelaida" class="backoffice-logo float-left mr-5 mt-2">
+            <h1 class="ml-4">Administrador de Contenidos</h1>
         </div> 
         </div>
 
@@ -38,14 +36,14 @@
 
             <div class="row mt-5 mb-3">
             <div class="col-lg-12 modulos text-center">
-                <a href="">Noticias</a>
+                <a href="{{ route('noticias') }}">Noticias</a>
             </div>
             </div>
 
         </div>
 
         <div class="col-lg-10">
-            @yield('content');
+            @yield('content')
         </div>
         </div>
 
