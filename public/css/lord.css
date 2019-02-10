@@ -1,10 +1,45 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/* Seccion del Banner Mobile 0px hasta 576 px*/
+
 .banner-container{
     background-size: cover;
 }
 
+.header-links{
+    display: none;
+}
+
 .logo{
-    width: 14.0625rem;
-    height: 14.0625rem;
+    width: 100%;
+    height: 100%;
+}
+
+.store{
+    font-size: 1.2em;
+    display: initial;
+}
+
+.store p{
+    font-size: 1.1em;
+    font-weight: bolder;
+}
+
+.banner-texto h1{
+    margin-bottom: 200px;
+    color: #F5F4EF;
+    font-size: 1.875rem;
+    font-family: 'Fahkwang', sans-serif;
+    font-weight : bold;
+    letter-spacing: 0.0625rem;
+    word-spacing: 0.125rem;
 }
 
 .cart-icon{
@@ -13,38 +48,57 @@
     margin-right: 0.7rem;
 }
 
-.banner-container a, .banner-container a h3{
+.banner-container a, .banner-container a p{
     color: white;
-    font-size: 1.25rem !important;
-    font-family: 'Playfair Display' ,serif;
+    font-size: 1.5rem !important;
+    font-family: 'Open Sans Condensed' ,serif;
     text-decoration: none;
 }
 
-.banner-texto h2{
-    margin-top: 100px;
-    margin-bottom: 300px;
-    color: #F5F4EF;
-    font-size: 1.875rem;
-    font-family : 'Playfair Display',serif;
-    font-weight : bold;
-    letter-spacing: 0.0625rem;
-    word-spacing: 0.125rem;
+/* Seccion del Banner - Tableta 576 px a 992 px */
+
+@media (min-width: 576px){
+    .logo{
+        width: 75%;
+        height: 75%;
+    }
 }
+
+@media (min-width: 768px){
+    .header-links{
+        display: initial;
+    }
+
+    .store{
+        display: none;
+    }
+    .banner-texto{
+        margin-top: 100px;
+    }
+}
+
+/* Seccion del Banner - Desktop 992px en adelante */
+
+@media (min-width: 992px){
+    .banner-texto{
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+}
+
+/* Seccion info marca - Mobile 0px hasta 576px */
 
 .contenedor-info-marca{
     padding-top: 100px;
-    min-height: 800px;
 }
 .botones{
     background-color: #D6C8A8;
-    margin-right: 0.833rem;
+    padding: 0.5em 0em;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.botones:hover{
-    background-color: #BEA877;
-}
-
-.botones h3 a{
+.botones h3{
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight : bold;
     font-size : 1.875rem;
@@ -55,64 +109,117 @@
 .contenedor-info-marca p{
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight : lighter;
-    font-size : 2em;
-    color : black;
+    font-size : 1.5em;
+    color : black;   
 }
 
-.contenedor-texto-info-marca{
-    min-height: 500px;
+.contenedor-texto-info-marca2{
+    display: none;
 }
 
-.boton{
-    background-color: #BEA877;
-    margin-top: 10px;
-    margin-bottom: 100px;
+/* Seccion info marca - Tableta 576 px a 992 px */
+
+@media (min-width: 576px){
+    .contenedor-info-marca p{
+        font-size: 1.7em;
+    }
 }
+
+@media (min-width: 768px){
+    .contenedor-texto-info-marca{
+        display: none;
+    }
+    .botones{
+        background: none;
+    }
+    .botones h3{
+        width: 100%;
+        background: #D6C8A8;
+        padding: 0.4em 0em;
+        font-size: 1.4em;
+        margin-bottom: 0;
+    }
+    .contenedor-texto-info-marca2{
+        display: inherit;
+        height: 450px;
+    }
+    .contenedor-info-marca{
+        padding-bottom: 100px;
+        border-bottom: 3px solid #F5F4EF;
+    }
+}
+
+/* Seccion info-marca - Desktop 992px en adelante */
+
+@media (min-width: 992px){
+    .botones h3{
+        font-size: 1.7em;
+    }
+
+    .botones h3:hover{
+        background-color: #BEA877;
+    }
+
+    .contenedor-texto-info-marca2{
+        height: 550px;
+    }
+
+    .contenedor-info-marca p{
+        font-size: 2em;
+    }
+}
+
+/* Seccion noticias - Mobile 0px hasta 576px */
 
 .contenedor-noticias{
-    background-color: #fff;
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
-.contenedor-noticias h3{
-    color: #000;
+.contenedor-noticias2{
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-noticias h3, .contenedor-noticias h2{
     font-size: 2.2em;
-    font-family : 'Playfair Display',serif;
-    font-weight : lighter;
+    font-family : 'Open Sans Condensed',serif;
+    font-weight : bold;
     letter-spacing: 0.0625rem;
     word-spacing: 0.125rem;
 }
 
-.contenedor-noticia1{
-    min-height: 400px;
-    background: url('../images/moda.jpg') center / cover;
+.contenedor-noticias p{
+    font-family: 'Open Sans Condensed',serif;
+    font-size: 1.3em;
 }
 
-.contenedor-noticia1:hover{  
-    background: url('../images/moda.jpg') center / cover, #D6C8A8;
+.contenedor-noticias a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bolder;
+}
+
+.descripcion-noticia{
+    display: block;
+    height: 220px;
+}
+
+.contenedor-noticia1{
+    height: 400px;
+    background: url('../images/moda.jpg') center / cover;
     background-blend-mode: screen;
 }
 
 .contenedor-noticia2{
-    min-height: 400px;
+    height: 400px;
     background: url('../images/reciclaje.jpg') center / cover;
-}
-
-.contenedor-noticia2:hover{
-    min-height: 400px;
-    background: url('../images/reciclaje.jpg') center / cover, #D6C8A8;
     background-blend-mode: screen;
 }
 
 .contenedor-noticia3{
-    min-height: 400px;
+    height: 400px;
     background: url('../images/lorem.jpg') center / cover;
-}
-
-.contenedor-noticia3:hover{
-    min-height: 400px;
-    background: url('../images/lorem.jpg') center / cover, #D6C8A8;
     background-blend-mode: screen;
 }
 
@@ -120,52 +227,169 @@
     display: none;
 }
 
-.contenedor-noticias a{
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
+.contenedor-categoria h2{
+    color: white;
+    font-size: 1.8em;
+    background-color: #000;
+    opacity: 0.5;
+    padding: 0.4em 2em;
+    border-radius: 5%;
+}
+
+.categoria{
+    height: 100%;
+    display: flex;
+}
+
+/* Seccion noticias - Tableta 576 px a 992 px */
+
+@media (min-width: 576px){
+
+}
+
+@media (min-width: 768px){
+    .contenedor-noticia1{
+        margin: 0 !important;
+        border-right: 5px solid #fff;
+        border-left: 5px solid #fff;
+    }
+    .contenedor-noticia2{
+        margin: 0 !important;
+        border-right: 5px solid #fff;
+        border-left: 5px solid #fff;
+    }
+    .contenedor-noticia3{
+        margin: 0 !important;
+        border-right: 5px solid #fff;
+        border-left: 5px solid #fff;
+    }
+    .contenedor-noticias2 h3{
+        font-size: 1.7em;
+    }
+    .contenedor-noticias p{
+        font-size: 1em;
+        margin-left: 10% !important;
+        margin-right: 10% !important;
+    }
+    .contenedor-noticias{
+        padding-bottom: 150px;
+    }
+}
+
+/* Seccion noticias - Desktop 992px en adelante */
+
+@media (min-width: 992px){
+    .contenedor-noticias2 h3{
+        font-size: 1.9em;
+    }
+    .contenedor-noticias p{
+        font-size: 1.2em;
+    }
+    .contenedor-noticias p a{
+        font-size: 1.4em;
+    }
+}
+
+/* Seccion contacto - Mobile 0px hasta 576px */
+
+.contenedor-contacto{
+    padding-top: 50px;
+    background-color: #D6C8A8;
+    padding-bottom: 50px;
 }
 
 .icon{
-    width: 1.5625rem; 
+    width: 50%; 
 }
 
-.contenedor-contacto{
-    padding-top: 125px;
-    padding-bottom: 125px;
+.icon:hover{
+    background-color: #F5F4EF;
+    border-radius: 100%;
 }
 
-.contenedor-contacto p{
-    font-size: 1.2em;
+/* Seccion contacto - Tablet 576px hasta 992px */
+
+@media (min-width: 576px){
+    
 }
 
-.contenedor-contacto a{
-    color: #212529;
+@media (min-width: 768px){
+    .icon{
+        width: 75%;
+    }
 }
 
-#direccion1:hover, #direccion2:hover{
-    text-decoration: underline;
+/* Seccion contacto - Desktop 992px en adelante */
+
+@media (min-width: 992px){
+    .icon{
+        width: 50%;
+    }
 }
 
-#map{
-    border: 1px solid #BEA877;
+/* Seccion Pie Pagina - Mobile 0px hasta 576px */
+
+.contenedor-pie-pagina2{
+    display: none;
 }
 
-.pie-pagina{
+.contenedor-pie-pagina{
+    background-color: #D6C8A8;
     border-top: 1px solid #BEA877;
 }
 
-.pie-pagina img{
+.contenedor-pie-pagina img{
     width: 75%;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
-.pie-pagina a{
-    color: #000;
-    font-weight: bold;
+.contenedor-pie-pagina p{
+    font-family: 'Fahkwang', sans-serif;
+    font-size: 1.1em;
+}
+/* Seccion Pie Pagina - Tablet 576px hasta 992px */
+
+@media (min-width: 576px){
+
 }
 
-.pie-pagina a:hover{
-    text-decoration: none;
+@media (min-width: 768px){
+    .contenedor-pie-pagina{
+        display: none;
+    }
+
+    .contenedor-pie-pagina2{
+        display: flex;
+        background-color: #D6C8A8;
+        border-top: 1px solid #BEA877;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .contenedor-pie-pagina2 h3{
+        font-family: 'Fahkwang', sans-serif;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .contenedor-pie-pagina2 p{
+        font-family: 'Fahkwang', sans-serif;
+        font-size: 1.1em;
+        margin-bottom: 0px;
+    }
+
+    .contenedor-pie-pagina2 img{
+        width: 75%;
+    }
+}   
+
+/* Seccion Pie Pagina - Desktop 992px en adelante */
+
+@media (min-width: 992px){
+    .contenedor-pie-pagina2 img{
+        width: 50%;
+    }
 }
 
 /*Comienzan los estilos del backoffice*/
@@ -224,4 +448,6 @@
     min-height: 400px;
     max-height: 500px;
 }
+
+
 
