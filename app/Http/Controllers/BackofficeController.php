@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BackofficeController extends Controller
 {
@@ -80,5 +82,24 @@ class BackofficeController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function showloginForm()
+    {
+        if(Auth::check()){
+            return redirect()->route('backoffice');
+        }
+        return view('backoffice.login');
+    }
+    public function login(Request $request)
+    {   
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            return redirect()->route('backoffice');
+        }else{
+
+            return redirect()->back()->withInput($request->all)->with('error','Credenciales invalidas');
+        }
     }
 }

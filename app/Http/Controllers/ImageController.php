@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Image;
+use App\Phrase;
 use Illuminate\Http\Request;
 
 
@@ -10,7 +11,8 @@ class ImageController extends Controller
 {
     public function index(){
         $image = Image::all()->last();
-        return view('backoffice.imagen-principal')->with('image',$image);
+        $phrase = Phrase::all()->last();
+        return view('backoffice.imagen-principal')->with('image',$image)->with('phrase',$phrase);
     }
 
     public function store(Request $request){

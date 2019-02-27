@@ -20,7 +20,7 @@ class NewsController extends Controller
         
         $rules=[
             'title' => 'required',
-            'description' => 'required',
+            'description' => 'required|max:255',
             'category' => 'required',
             'link' => 'required'
         ];
@@ -28,6 +28,7 @@ class NewsController extends Controller
         $messages =[
             'title.required' => 'El campo titulo es necesario',
             'description.required' => 'El campo descripcion es necesario',
+            'description.max' => 'La descripcion puede tener 255 caracteres como maximo',
             'category.required' => 'El campo categoria es necesario',
             'link.required' => 'El campo link es necesario'
         ];

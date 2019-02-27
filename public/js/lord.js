@@ -1,70 +1,48 @@
 var textoDinamico = document.querySelector('#texto-dinamico')
 
 var textoDinamicoMarca = document.querySelector('#texto-dinamico-marca');
-var textoDinamicoValores = document.querySelector('#texto-dinamico-valores');
-var textoDinamicoVision = document.querySelector('#texto-dinamico-vision');
-var textoDinamicoProductos = document.querySelector('#texto-dinamico-productos');
+var textoDinamicoObjetivos = document.querySelector('#texto-dinamico-objetivos');
 
 var botonMarca = document.querySelector('#marca');
-var botonValores = document.querySelector('#valores');
-var botonVision = document.querySelector('#vision');
-var botonProductos = document.querySelector('#productos');
+var botonObjetivos = document.querySelector('#objetivos');
 
-textoDinamico.innerText = 'Adelaida es un emprendimiento de ropa interior de diseño. Cuenta con su propia marca especializada en la confección de pijamas y batas; así como también con otra gran variedad de marcas que se caracterizan por sus diseños únicos, innovadores y super cómodos. Busca ofrecer sobre todo algo único y exclusivo. En constante cambio en géneros, modelos y estampado, brinda a sus clientes la posibilidad de renovarse, sentirse única y cómoda en una sola compra.';
+
+textoDinamico.innerText = 'Adelaida es un emprendimiento personal en el que pude desarrollarme, meterme en el mundo del emprendimiento, valorar el trabajo dedicado y artesanal, conocer gente increible con ideas enormes y contagiarme de muchas energias y ganas de crecer; no solo en lo personal, sino tambien en el ambito social, ofeciendo mucho mas que ropa interior, sino tambien diseño, trabajo artesanal, contenido social y responsabilidad medioambiental. Pongo el alma en esto , y mucha dedicacion y esperanzas en que todos los proyectos que tengo puedan llevarse a cabo poco a poco. Se podría decir que Adelaida es como una hija para mi.';
 
 botonMarca.addEventListener('click',function(){
     if(textoDinamicoMarca.innerText == ''){
-        textoDinamicoMarca.innerText ='Adelaida es un emprendimiento de ropa interior de diseño. Cuenta con su propia marca especializada en la confección de pijamas y batas; así como también con otra gran variedad de marcas que se caracterizan por sus diseños únicos, innovadores y super cómodos. Busca ofrecer sobre todo algo único y exclusivo. En constante cambio en géneros, modelos y estampado, brinda a sus clientes la posibilidad de renovarse, sentirse única y cómoda en una sola compra.';
+        textoDinamicoMarca.innerText ='Adelaida es un emprendimiento personal en el que pude desarrollarme, meterme en el mundo del emprendimiento, valorar el trabajo dedicado y artesanal, conocer gente increible con ideas enormes y contagiarme de muchas energias y ganas de crecer; no solo en lo personal, sino tambien en el ambito social, ofeciendo mucho mas que ropa interior, sino tambien diseño, trabajo artesanal, contenido social y responsabilidad medioambiental. Pongo el alma en esto , y mucha dedicacion y esperanzas en que todos los proyectos que tengo puedan llevarse a cabo poco a poco. Se podría decir que Adelaida es como una hija para mi.';
     }else{
         textoDinamicoMarca.innerText = '';
     }
-    textoDinamico.innerText = 'Adelaida es un emprendimiento de ropa interior de diseño. Cuenta con su propia marca especializada en la confección de pijamas y batas; así como también con otra gran variedad de marcas que se caracterizan por sus diseños únicos, innovadores y super cómodos. Busca ofrecer sobre todo algo único y exclusivo. En constante cambio en géneros, modelos y estampado, brinda a sus clientes la posibilidad de renovarse, sentirse única y cómoda en una sola compra.';
+    textoDinamico.innerText = 'Adelaida es un emprendimiento personal en el que pude desarrollarme, meterme en el mundo del emprendimiento, valorar el trabajo dedicado y artesanal, conocer gente increible con ideas enormes y contagiarme de muchas energias y ganas de crecer; no solo en lo personal, sino tambien en el ambito social, ofeciendo mucho mas que ropa interior, sino tambien diseño, trabajo artesanal, contenido social y responsabilidad medioambiental. Pongo el alma en esto , y mucha dedicacion y esperanzas en que todos los proyectos que tengo puedan llevarse a cabo poco a poco. Se podría decir que Adelaida es como una hija para mi.';
 });
 
-botonMarca.addEventListener('mouseover',function(){
-    textoDinamico.innerText = 'Adelaida es un emprendimiento de ropa interior de diseño. Cuenta con su propia marca especializada en la confección de pijamas y batas; así como también con otra gran variedad de marcas que se caracterizan por sus diseños únicos, innovadores y super cómodos. Busca ofrecer sobre todo algo único y exclusivo. En constante cambio en géneros, modelos y estampado, brinda a sus clientes la posibilidad de renovarse, sentirse única y cómoda en una sola compra.';
-});
+const desktopBp = matchMedia('(min-width: 768px)');
+    const changeSize = mql => {
+        if(mql.matches == true){
+            botonMarca.addEventListener('mouseover',function(){
+                textoDinamico.innerText = 'Adelaida es un emprendimiento personal en el que pude desarrollarme, meterme en el mundo del emprendimiento, valorar el trabajo dedicado y artesanal, conocer gente increible con ideas enormes y contagiarme de muchas energias y ganas de crecer; no solo en lo personal, sino tambien en el ambito social, ofeciendo mucho mas que ropa interior, sino tambien diseño, trabajo artesanal, contenido social y responsabilidad medioambiental. Pongo el alma en esto , y mucha dedicacion y esperanzas en que todos los proyectos que tengo puedan llevarse a cabo poco a poco. Se podría decir que Adelaida es como una hija para mi.';
+                document.getElementById('marcah3').style.background = "#BEA877";
+                document.getElementById('objetivosh3').style.background = "#D6C8A8";
+            });
+            botonObjetivos.addEventListener('mouseover',function(){
+                textoDinamico.innerText = 'Adelaida busca ofrecer productos únicos caracterizados no solo por el diseño, sino tambien por una historia, un sueño, un emprendimiento. Busca reflejar el trabajo y dedicación para que entiendas que no solo te estas llevando una pieza unica y de diseño, sino tambien la ilusión, dedicación y amor, de todas las personas que estan detras de cada marca que comercializa Adelaida. Buscamos generar conciencia social a travez del reciclaje, el valor por el emprendedurismo, el respeto por el trabajo ajeno y la importancia del trabajo justo. Esperamos de corazón que al comprar Adelaida compres mucho mas que una prenda. Esperamos que compres con sentido, con conciencia y con amor.';
+                document.getElementById('marcah3').style.background = "#D6C8A8";
+                document.getElementById('objetivosh3').style.background = "#BEA877";
+            }); 
+        }   
+    };
+desktopBp.addListener(changeSize);
+changeSize(desktopBp);
 
-botonValores.addEventListener('click',function(){
-    if(textoDinamicoValores.innerText == ''){
-        textoDinamicoValores.innerText ='Tiene como objetivo a su vez generar un impacto social a través de diferentes vías. Una de ellas es el taller. El cual tiene como fin no solo la producción de las prendas que se comercializan, sino también la capacitación a través de diferentes talleres, tales como:  emprendedurismo , contabilidad, moda , corte y confección , mordería , géneros , empoderamiento , etc. Con la finalidad de lograr que las personas que trabajen en el, lo hagan solo por un periodo de tiempo preestablecido y posteriormente puedan por su lado abrir su propio emprendimiento.';
+botonObjetivos.addEventListener('click',function(){
+    if(textoDinamicoObjetivos.innerText == ''){
+        textoDinamicoObjetivos.innerText ='Adelaida busca ofrecer productos únicos caracterizados no solo por el diseño, sino tambien por una historia, un sueño, un emprendimiento. Busca reflejar el trabajo y dedicación para que entiendas que no solo te estas llevando una pieza unica y de diseño, sino tambien la ilusión, dedicación y amor, de todas las personas que estan detras de cada marca que comercializa Adelaida. Buscamos generar conciencia social a travez del reciclaje, el valor por el emprendedurismo, el respeto por el trabajo ajeno y la importancia del trabajo justo. Esperamos de corazón que al comprar Adelaida compres mucho mas que una prenda. Esperamos que compres con sentido, con conciencia y con amor.';
     }else{
-        textoDinamicoValores.innerText = '';
+        textoDinamicoObjetivos.innerText = '';
     }
-    textoDinamico.innerText = 'Tiene como objetivo a su vez generar un impacto social a través de diferentes vías. Una de ellas es el taller. El cual tiene como fin no solo la producción de las prendas que se comercializan, sino también la capacitación a través de diferentes talleres, tales como:  emprendedurismo , contabilidad, moda , corte y confección , mordería , géneros , empoderamiento , etc. Con la finalidad de lograr que las personas que trabajen en el, lo hagan solo por un periodo de tiempo preestablecido y posteriormente puedan por su lado abrir su propio emprendimiento.';
-});
-
-
-botonValores.addEventListener('mouseover',function(){
-    textoDinamico.innerText = 'Tiene como objetivo a su vez generar un impacto social a través de diferentes vías. Una de ellas es el taller. El cual tiene como fin no solo la producción de las prendas que se comercializan, sino también la capacitación a través de diferentes talleres, tales como:  emprendedurismo , contabilidad, moda , corte y confección , mordería , géneros , empoderamiento , etc. Con la finalidad de lograr que las personas que trabajen en el, lo hagan solo por un periodo de tiempo preestablecido y posteriormente puedan por su lado abrir su propio emprendimiento.';
-});
-
-
-botonVision.addEventListener('click',function(){
-    if(textoDinamicoVision.innerText == ''){
-        textoDinamicoVision.innerText ='Por otro lado, la marca tiene especial interés en la confección de todo tipo de talles, desde un S a un XXL. Ya que busca comprender a la mujer al natural, dejando de lado estereotipos fijados por una sociedad que se empeña en remarcar cuerpos escuálidos como estándares de belleza. En ADELAIDA se busca romper con esos prototipos, resaltar a la mujer real y aquellas cosas que realmente las hacen hermosas “sus historias”. Estas ideas se ven aplicadas en las producciones de fotos que';
-    }else{
-        textoDinamicoVision.innerText = '';
-    }
-    textoDinamico.innerText = 'Por otro lado, la marca tiene especial interés en la confección de todo tipo de talles, desde un S a un XXL. Ya que busca comprender a la mujer al natural, dejando de lado estereotipos fijados por una sociedad que se empeña en remarcar cuerpos escuálidos como estándares de belleza. En ADELAIDA se busca romper con esos prototipos, resaltar a la mujer real y aquellas cosas que realmente las hacen hermosas “sus historias”. Estas ideas se ven aplicadas en las producciones de fotos que'
-});
-
-botonVision.addEventListener('mouseover',function(){
-    textoDinamico.innerText = 'Por otro lado, la marca tiene especial interés en la confección de todo tipo de talles, desde un S a un XXL. Ya que busca comprender a la mujer al natural, dejando de lado estereotipos fijados por una sociedad que se empeña en remarcar cuerpos escuálidos como estándares de belleza. En ADELAIDA se busca romper con esos prototipos, resaltar a la mujer real y aquellas cosas que realmente las hacen hermosas “sus historias”. Estas ideas se ven aplicadas en las producciones de fotos que';
-});
-
-
-botonProductos.addEventListener('click',function(){
-    if(textoDinamicoProductos.innerText == ''){
-        textoDinamicoProductos.innerText ='Este proyecto tiene que ver con la confección de prendas (todas las que se vendan en el local) en talles especiales. Y a su vez para casos especiales como mujeres que tuvieron cáncer de mamas. Todo esto también acompañado por una estrategia de marketing que busca por un lado resaltar la belleza natural, hacer fotos con mujeres con sobre peso. Buscar que las personas valoren el cuerpo que tienen y no busquen un ideal que hasta termina siendo poco saludable. A su vez concientizar sobre el cáncer de mama y las personas que pudieron sobrepasarlo y pueden vivir con excelente calidad de vida sin acomplejarse por ello.';
-    }else{
-        textoDinamicoProductos.innerText = '';
-    }
-    textoDinamico.innerText = 'Este proyecto tiene que ver con la confección de prendas (todas las que se vendan en el local) en talles especiales. Y a su vez para casos especiales como mujeres que tuvieron cáncer de mamas. Todo esto también acompañado por una estrategia de marketing que busca por un lado resaltar la belleza natural, hacer fotos con mujeres con sobre peso. Buscar que las personas valoren el cuerpo que tienen y no busquen un ideal que hasta termina siendo poco saludable. A su vez concientizar sobre el cáncer de mama y las personas que pudieron sobrepasarlo y pueden vivir con excelente calidad de vida sin acomplejarse por ello.'
-});
-
-botonProductos.addEventListener('mouseover',function(){
-    textoDinamico.innerText = 'Este proyecto tiene que ver con la confección de prendas (todas las que se vendan en el local) en talles especiales. Y a su vez para casos especiales como mujeres que tuvieron cáncer de mamas. Todo esto también acompañado por una estrategia de marketing que busca por un lado resaltar la belleza natural, hacer fotos con mujeres con sobre peso. Buscar que las personas valoren el cuerpo que tienen y no busquen un ideal que hasta termina siendo poco saludable. A su vez concientizar sobre el cáncer de mama y las personas que pudieron sobrepasarlo y pueden vivir con excelente calidad de vida sin acomplejarse por ello.';
+    textoDinamico.innerText = 'Adelaida busca ofrecer productos únicos caracterizados no solo por el diseño, sino tambien por una historia, un sueño, un emprendimiento. Busca reflejar el trabajo y dedicación para que entiendas que no solo te estas llevando una pieza unica y de diseño, sino tambien la ilusión, dedicación y amor, de todas las personas que estan detras de cada marca que comercializa Adelaida. Buscamos generar conciencia social a travez del reciclaje, el valor por el emprendedurismo, el respeto por el trabajo ajeno y la importancia del trabajo justo. Esperamos de corazón que al comprar Adelaida compres mucho mas que una prenda. Esperamos que compres con sentido, con conciencia y con amor.';
 });
 
 var contenedorNoticia1 = document.querySelector('#contenedor-noticia1');
@@ -74,33 +52,33 @@ var categoria1 = document.querySelector('#categoria-noticia1');
 contenedorNoticia1.addEventListener('click',function(){
     if(infoNoticia2.style.display != ''){
         infoNoticia2.style.display = 'none';
-        contenedorNoticia2.style.background = "url('images/reciclaje.jpg') center / cover";
+        contenedorNoticia2.style.background = "url('svg/sustentabilidad.svg') center / cover";
     }
     if(infoNoticia3.style.display != ''){
         infoNoticia3.style.display = 'none';
-        contenedorNoticia3.style.background = "url('images/lorem.jpg') center / cover";
+        contenedorNoticia3.style.background = "url('svg/emprendedurismo.svg') center / cover";
     }
 
     if(infoNoticia1.style.display == 'none' || infoNoticia1.style.display == ''){
         categoria1.style.display = "none";
         infoNoticia1.style.display = "initial";
-        contenedorNoticia1.style.background = "url('images/moda.jpg') center / cover, #D6C8A8";
+        contenedorNoticia1.style.background = "url('svg/moda.svg') center / cover, #D6C8A8";
     }else{
         categoria1.style.display = 'flex';
         infoNoticia1.style.display = 'none';
-        contenedorNoticia1.style.background = "url('images/moda.jpg') center / cover";
+        contenedorNoticia1.style.background = "url('svg/moda.svg') center / cover";
     }
 })
 
 contenedorNoticia1.addEventListener('mouseover',function(){
     categoria1.style.display = 'none';
     infoNoticia1.style.display = 'initial';
-    contenedorNoticia1.style.background = "url('images/moda.jpg') center / cover, #D6C8A8";
+    contenedorNoticia1.style.background = "url('svg/moda.svg') center / cover, #D6C8A8";
 });
 contenedorNoticia1.addEventListener('mouseout',function(){
     categoria1.style.display = 'flex';
     infoNoticia1.style.display = 'none';
-    contenedorNoticia1.style.background = "url('images/moda.jpg') center / cover";
+    contenedorNoticia1.style.background = "url('svg/moda.svg') center / cover";
 });
 
 var contenedorNoticia2 = document.querySelector('#contenedor-noticia2');
@@ -110,33 +88,33 @@ var categoria2 = document.querySelector('#categoria-noticia2');
 contenedorNoticia2.addEventListener('click',function(){
     if(infoNoticia1.style.display != ''){
         infoNoticia1.style.display = 'none';
-        contenedorNoticia1.style.background = "url('images/moda.jpg') center / cover";
+        contenedorNoticia1.style.background = "url('svg/moda.svg') center / cover";
     }
     if(infoNoticia3.style.display != ''){
         infoNoticia3.style.display = 'none';
-        contenedorNoticia3.style.background = "url('images/lorem.jpg') center / cover";
+        contenedorNoticia3.style.background = "url('svg/emprendedurismo.svg') center / cover";
     }
 
     if(infoNoticia2.style.display == 'none' || infoNoticia2.style.display == ''){
         categoria2.style.display = 'none';
         infoNoticia2.style.display = "initial";
-        contenedorNoticia2.style.background = "url('images/reciclaje.jpg') center / cover, #D6C8A8";
+        contenedorNoticia2.style.background = "url('svg/sustentabilidad.svg') center / cover, #D6C8A8";
     }else{
         categoria2.style.display = "flex";
         infoNoticia2.style.display = 'none';
-        contenedorNoticia2.style.background = "url('images/reciclaje.jpg') center / cover";
+        contenedorNoticia2.style.background = "url('svg/sustentabilidad.svg') center / cover";
     }
 })
 
 contenedorNoticia2.addEventListener('mouseover',function(){
     categoria2.style.display = 'none';
     infoNoticia2.style.display = 'initial';
-    contenedorNoticia2.style.background = "url('images/reciclaje.jpg') center / cover, #D6C8A8";
+    contenedorNoticia2.style.background = "url('svg/sustentabilidad.svg') center / cover, #D6C8A8";
 });
 contenedorNoticia2.addEventListener('mouseout',function(){
     categoria2.style.display = 'flex';
     infoNoticia2.style.display = 'none';
-    contenedorNoticia2.style.background = "url('images/reciclaje.jpg') center / cover";
+    contenedorNoticia2.style.background = "url('svg/sustentabilidad.svg') center / cover";
 });
 
 var contenedorNoticia3 = document.querySelector('#contenedor-noticia3');
@@ -146,33 +124,33 @@ var categoria3 = document.querySelector('#categoria-noticia3');
 contenedorNoticia3.addEventListener('click',function(){
     if(infoNoticia2.style.display != ''){
         infoNoticia2.style.display = 'none';
-        contenedorNoticia2.style.background = "url('images/reciclaje.jpg') center / cover";
+        contenedorNoticia2.style.background = "url('svg/sustentabilidad.svg') center / cover";
     }
     if(infoNoticia1.style.display != ''){
         infoNoticia1.style.display = 'none';
-        contenedorNoticia1.style.background = "url('images/moda.jpg') center / cover";
+        contenedorNoticia1.style.background = "url('svg/moda.svg') center / cover";
     }
 
     if(infoNoticia3.style.display == 'none' || infoNoticia3.style.display == ''){
         categoria3.style.display = 'none';
         infoNoticia3.style.display = "initial";
-        contenedorNoticia3.style.background = "url('images/lorem.jpg') center / cover, #D6C8A8";
+        contenedorNoticia3.style.background = "url('svg/emprendedurismo.svg') center / cover, #D6C8A8";
     }else{
         categoria3.style.display = 'flex';
         infoNoticia3.style.display = 'none';
-        contenedorNoticia3.style.background = "url('images/lorem.jpg') center / cover";
+        contenedorNoticia3.style.background = "url('svg/emprendedurismo.svg') center / cover";
     }
 })
 
 contenedorNoticia3.addEventListener('mouseover',function(){
     categoria3.style.display = 'none';
     infoNoticia3.style.display = 'initial';
-    contenedorNoticia3.style.background = "url('images/lorem.jpg') center / cover, #D6C8A8";
+    contenedorNoticia3.style.background = "url('svg/emprendedurismo.svg') center / cover, #D6C8A8";
 });
 contenedorNoticia3.addEventListener('mouseout',function(){
     categoria3.style.display = 'flex';
     infoNoticia3.style.display = 'none';
-    contenedorNoticia3.style.background = "url('images/lorem.jpg') center / cover";
+    contenedorNoticia3.style.background = "url('svg/emprendedurismo.svg') center / cover";
 });
 
 var conocenos = document.querySelector('#link-conocenos');

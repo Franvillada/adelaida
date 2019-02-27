@@ -15,9 +15,17 @@ Route::get('/',  'HomeController@index');
 Route::get('/home',  'HomeController@index')->name('home');
 Route::get('/noticias','NewsController@index');
 
-Route::get('/admcontenidos', 'BackofficeController@index');
-Route::get('/admcontenidos/imagen-principal','ImageController@index')->name('imagen-principal');
+/* Backoffice routes */
+Route::get('/admcontenidos/login', 'BackofficeController@showloginForm')->name('login');
+Route::post('/admcontenidos/login', 'BackofficeController@login');
+
+Route::get('/admcontenidos', 'BackofficeController@index')->name('backoffice')->middleware('auth');
+
+Route::get('/admcontenidos/imagen-principal','ImageController@index')->name('imagen-principal')->middleware('auth');
 Route::post('/admcontenidos/imagen-principal','ImageController@store');
-Route::get('/admcontenidos/phrases','PhraseController@index');
-Route::get('/admcontenidos/noticias','NewsController@create')->name('noticias');
+
+Route::get('/admcontenidos/encabezado-principal','PhraseController@index')->name('encabezado-principal')->middleware('auth');
+Route::post('/admcontenidos/encabezado-principal','PhraseController@store');
+
+Route::get('/admcontenidos/noticias','NewsController@create')->name('noticias')->middleware('auth');
 Route::post('/admcontenidos/noticias','NewsController@store');

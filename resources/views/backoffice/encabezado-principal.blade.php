@@ -33,7 +33,7 @@
         </div>
         <div class="row banner-texto text-center">
             <div class="col-8 offset-2 col-lg-6 offset-lg-3">
-                <h1>{{$phrase->principle}}</h1>
+                <h1 id="encabezado-principal">{{$phrase->principle}}</h1>
             </div>
         </div>
     </div>
@@ -42,13 +42,13 @@
 
 <div class="row mt-4">
 <div class="col-lg-6 offset-lg-3">
-    <form method="POST" action="" enctype="multipart/form-data">
+    <form method="POST" action="">
         @csrf
-        <div class="form-group d-flex align-content-center justify-content-around">
-            <label for="background-image" class="background-image-label label-formulario">Elegir Imagen</label>
-            <input id="background-image" type="file" class="background-image-input form-control mb-0 contenedor-input" name="background-image" autofocus  onchange="onChange(event)">
+        <div class="form-group">
+            <label for="titulo" class="label-formulario">Encabezado Principal</label>
+            <input type="text" name="titulo" class="form-control contenedor-input" value="" id="titulo">
 
-            <button type="submit">Actualizar Imagen</button>
+            <button type="submit" class="mt-2 w-100">Actualizar Encabezado</button>
         </div>
 
         

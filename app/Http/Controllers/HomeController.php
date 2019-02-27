@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\News;
 use App\Image;
+use App\Phrase;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection as Collection;
 
@@ -34,7 +35,8 @@ class HomeController extends Controller
             }
         }
         $image = Image::all()->last();
-        return view('home')->with('arr',$arr)->with('image',$image);
+        $phrase = Phrase::all()->last();
+        return view('home')->with('arr',$arr)->with('image',$image)->with('phrase',$phrase);
     }
 
     /**

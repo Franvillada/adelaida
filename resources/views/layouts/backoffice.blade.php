@@ -14,8 +14,7 @@
     <div class="col-lg-12">
         <div class="row header" style="background-color: #D6C8A8;">
         <div class="col-lg-8 offset-lg-2 d-flex justify-content-center align-items-center">
-            <img src="{{ asset('images/Logo.svg')}}" alt="Logo-Adelaida" class="backoffice-logo float-left mr-5 mt-2">
-            <h1 class="ml-4">Administrador de Contenidos</h1>
+            <h1>Administrador de Contenidos</h1>
         </div> 
         </div>
 
@@ -30,13 +29,19 @@
 
             <div class="row mt-5 mb-3">
             <div class="col-lg-12 modulos text-center">
-                <a href="">Texto de la Pagina</a>
+                <a href="{{route('encabezado-principal')}}">Encabezado Principal</a>
             </div>
             </div>
 
             <div class="row mt-5 mb-3">
             <div class="col-lg-12 modulos text-center">
                 <a href="{{ route('noticias') }}">Noticias</a>
+            </div>
+            </div>
+
+            <div class="row mt-5 mb-3">
+            <div class="col-lg-12 modulos text-center">
+                <a href="https://adelaida.mitiendanube.com/admin/" target="_blank">Adm. Tienda Nube</a>
             </div>
             </div>
 
@@ -49,5 +54,6 @@
 
     </div>
     </div>
+    <script src="{{asset('js/backoffice.js')}}"></script>
 </body>
 </html>

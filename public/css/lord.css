@@ -11,6 +11,8 @@ html{
 
 .banner-container{
     background-size: cover;
+    background-color: #BEA877;
+    background-blend-mode: multiply;
 }
 
 .header-links{
@@ -91,6 +93,7 @@ html{
 .contenedor-info-marca{
     padding-top: 100px;
 }
+
 .botones{
     background-color: #D6C8A8;
     padding: 0.5em 0em;
@@ -156,7 +159,7 @@ html{
         font-size: 1.7em;
     }
 
-    .botones h3:hover{
+    #marca h3{
         background-color: #BEA877;
     }
 
@@ -207,19 +210,19 @@ html{
 
 .contenedor-noticia1{
     height: 400px;
-    background: url('../images/moda.jpg') center / cover;
+    background: url('../svg/moda.svg') center / cover;
     background-blend-mode: screen;
 }
 
 .contenedor-noticia2{
     height: 400px;
-    background: url('../images/reciclaje.jpg') center / cover;
+    background: url('../svg/sustentabilidad.svg') center / cover;
     background-blend-mode: screen;
 }
 
 .contenedor-noticia3{
     height: 400px;
-    background: url('../images/lorem.jpg') center / cover;
+    background: url('../svg/emprendedurismo.svg') center / cover;
     background-blend-mode: screen;
 }
 
@@ -232,8 +235,9 @@ html{
     font-size: 1.8em;
     background-color: #000;
     opacity: 0.5;
-    padding: 0.4em 2em;
+    padding: 0.4em 0;
     border-radius: 5%;
+    text-align: center;
 }
 
 .categoria{
@@ -333,6 +337,10 @@ html{
     display: none;
 }
 
+.contenedor-pie-pagina2 a{
+    color: #212529;
+}
+
 .contenedor-pie-pagina{
     background-color: #D6C8A8;
     border-top: 1px solid #BEA877;
@@ -370,7 +378,7 @@ html{
     .contenedor-pie-pagina2 h3{
         font-family: 'Fahkwang', sans-serif;
         font-size: 1.2em;
-        font-weight: bold;
+        font-weight: 900;
     }
 
     .contenedor-pie-pagina2 p{
@@ -394,18 +402,31 @@ html{
 
 /*Comienzan los estilos del backoffice*/
 
+
 .header{
     height: 100px;
-}
-
-.backoffice-logo{
-    width: 9rem;
-    height: 9rem;
 }
 
 .header h1{
     color: white;
     font-family: 'Playfair Display', serif;
+}
+
+.login-container{
+    margin-top: 150px;
+}
+
+.boton-ingreso{
+    background-color: #D6C8A8;
+    border: none;
+    font-weight: bold;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.boton-ingreso:hover{
+    background-color: #BEA877
 }
 
 .contenido .modulos a{
@@ -445,8 +466,11 @@ html{
 }
 
 .contenedor-imagen{
-    min-height: 400px;
-    max-height: 500px;
+    background-size: cover;
+    background-color: #BEA877;
+    background-blend-mode: multiply;
+    min-height: 500px;
+    max-height: 550px;
 }
 
 
