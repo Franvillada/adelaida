@@ -140,25 +140,10 @@
             </a>
         </div>
     </div>
-    
-    <div class="row contenedor-pie-pagina">
-        <div class="col-12">
-            <div class="row">
-                <div class="col-10 offset-1 d-flex justify-content-center">
-                    <img src="{{ asset('svg/footer-logo.svg') }}">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-10 offset-1 mb-2">
-                    <p class="font-weight-light text-center">© Copyright 2019 Francisco Villada</p>
-                </div>
-            </div>  
-        </div>      
-    </div>
 
-    <div class="row contenedor-pie-pagina2">
-        <div class="col-5 offset-1 text-center p-0">
-            <h3>Contacto</h3>
+    <div class="row contenedor-pie-pagina">
+        <div class="col-10 offset-1 col-md-5 offset-md-1 text-center p-0">
+            
             <a href="mailto:adelaida@adelaida.com?Subject=Hola" target="_top"><p>adelaida@adelaida.com</p></a>
             <p>+54 387 6055209</p>
             <p>Salta</p>
@@ -167,7 +152,7 @@
             <p><strong>La Comarca - San Lorenzo Chico</strong></p>
             <p>Lunes a Sabados de 9:30 a 13:30 y de 17:00 a 21:00</p>
         </div>
-        <div class="col-4 offset-1 d-flex flex-column justify-content-center align-items-center">
+        <div class="col-10 offset-1 col-md-4 offset-md-1 d-flex flex-column justify-content-center align-items-center">
             <img src="{{ asset('svg/footer-logo.svg') }}" alt="Adelaida Brand-Logo" id="logo-footer">
             <p class="font-weight-light text-center mt-3">© Copyright 2019 Francisco Villada</p>  
         </div>
